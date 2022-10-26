@@ -4,7 +4,7 @@
 
 int main(){
 
-	int n, m, p;
+	int n, m, p, seed = 1;
 
 	srand(time(NULL));
 	n = rand();

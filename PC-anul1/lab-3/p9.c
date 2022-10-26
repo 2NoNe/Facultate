@@ -8,7 +8,7 @@ int prime(int n){
  	{
  		if(n % i == 0)
  		{
- 			break;
+ 			return 0;
  		}
  		else
  		{

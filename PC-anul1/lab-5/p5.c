@@ -29,7 +29,7 @@ double taylor(double x, int n){
 	for(i=1; i<=n; i++){
 
 		t = t + (putere(x,i)/factorial(i)); //calculeaza bn,dar nu da rezultatul
-		printf("%f\n", t);
+		//printf("%f\n", t);
 	}
 	t = t + 1;
 	return t;

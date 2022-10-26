@@ -7,11 +7,12 @@ int main (){
 	scanf("%d %d", &n, &m);
 
 	for(i=1; i<= n; i++ ){
-		printf("%3d", i);
+		printf("%4d", i);
+		
 		if(i % m == 0){
 			printf("\n");
 		}
-		if(i % 24 == 0){
+		if(i % (m * 24) == 0){
 			printf("\n");
 		}
 	}

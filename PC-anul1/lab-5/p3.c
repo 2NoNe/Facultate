@@ -4,46 +4,50 @@ int prim(int n){
 
 	int i;
 
+	if(n == 0)
+		return 0;
+
 	if(n == 1)
 		return 1;
 
-	for(i=2 ; i <= n/2 ; i++)
+	for(i=2 ; i <= n/2 ; i++){
 
 		if(n % i == 0)
 			return 0;
-		else
-			return 1;
+	}
+
+	return 1;
 }
 
 int main(){
 
-	int n, i, j, k = 0, p = 0 ,x[50];
+	int n, i, j = 0 ,k , v[50];
 
 	scanf("%d", &n);
-	
-	for(j=1;j<=n; j++){
 
-		k= prim (j);
-		printf("nr %d este %d\n", j, k );	
+	for(i = 1; i < n; i++){
 
-		if(prim(j) == 1){
-			x[k] = j; // dc nu imi ia valorile?
-			k++;
-			printf("%3d", x[k]);	
+		if( prim(i) == 1 ){
+			v[j] = i;
+			j++;
 		}
 
 	}
 
-	for(i = 2; i<= n;i++){
+	for(i = 0; i < j; i++)
+		printf("v[%d] =%2d ",i, v[i]);
 
-		if( prim(i) == 1){
+	printf("\n");
 
-			if(x[p] + i == n){
-				printf("%d + %d\n", x[p], i);
-				p++;
-			}
+	for(i =0; i < j; i++){
+
+		for(k = i+1; k < j; k++){
+
+			if(v[k] + v[i] == n)
+				printf("%d + %d\n", v[i], v[k]);
 		}
-	}		
+	}
+		
 
 	return 0;
 }

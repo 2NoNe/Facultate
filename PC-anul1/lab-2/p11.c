@@ -9,7 +9,7 @@ int main(){
 
 	d = b*b - 4*a*c;
 
-	if(d < 0)
+	if(d < 0 || a == 0)
 		printf("Nu exista solutii\n");
 	else{
 		if(d == 0){

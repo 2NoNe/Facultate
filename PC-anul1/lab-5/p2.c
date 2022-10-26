@@ -11,10 +11,6 @@ int cifra(int n, int c){
 
 		else
 			n = n/10;
-		if(n/10 == 0){     //intrebare pt 0
-			printf("Nu\n");
-			break;
-		}
 	}
 
 	return 0;

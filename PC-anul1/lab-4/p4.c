@@ -6,6 +6,7 @@ int main(){
 	int A[100][100] ,B[100][100] ,C[100][100];
 
 	scanf("%d %d", &n, &m);
+
 	for(i=0; i<n; i++){
 		for(j=0; j<m; j++){
 
@@ -14,6 +15,7 @@ int main(){
 	}
 
 	scanf("%d %d", &p, &q);
+
 	for(a=0; a<p; a++){
 		for(b=0; b<q; b++){
 
@@ -42,12 +44,14 @@ int main(){
 		}
 	}
 
+	printf("\n");
+
 	printf("%d %d\n",n, q);
 
 	for(i=0; i<n; i++){
 		for(j=0; j<q; j++){
 			
-			printf("%d", C[i][j]);
+			printf("%3d", C[i][j]);
 		}
 		printf("\n");
 	}

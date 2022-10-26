@@ -13,7 +13,7 @@ int main(){
 		printf("¦%+8.3lf¦%+8.3lf¦%+8.3lf¦",x, sin(x), cos(x));
 		printf("\n");
 	}
-	getchar();
+	//getchar();
 
 	return 0;
 }

@@ -19,16 +19,18 @@ void extragere(int a[100],int b[100],int *c,int n,int m){
 			if(a[i] == b[j]){
 
 				c[k] = b[j];
-				printf("c[%d] = %d\n",k ,c[k]); //se salveaza
+				//printf("c[%d] = %d\n",k ,c[k]);
 				k++;
 			}
 		}
 
 	}
+
+	printf("\n");
 	printf("%d\n", k);
 
 	for(i=0; i<k; i++){
-		printf("%d ", c[k]); // nu imi afiseaza ???
+		printf("%d ", c[i]);
 	}
 	printf("\n");
 }
