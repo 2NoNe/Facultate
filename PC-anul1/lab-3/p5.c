@@ -5,9 +5,9 @@ int main(){
 	int p, i, j, k;
 	int min, mid, max;
 
-	min = i;
+	/*min = i;
 	mid = j;
-	max = k;
+	max = k;*/
 	scanf("%d", &p);
 
 	for(i=0; i<=p ; i++){
@@ -15,10 +15,10 @@ int main(){
 
 			k = p- i -j;
 
-			if(i+j >= k && i+k>= j && k+j >= i){
+			if(i+j >= k && i+k>= j && k+j >= i && i <= j && j <= k){
 				
 				min = i;
-				mid = j; //sa nu mai afisez de 2 ori
+				mid = j; 
 				max = k;
 
 				if(min > mid){

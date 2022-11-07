@@ -2,7 +2,7 @@
 
 int main(){
 
-	int i, j, n, m, v[100][100], a[50], max, min;
+	int i, j, n, m, v[100][100], a[100], max, min;
 
 	scanf("%d %d", &n, &m);
 

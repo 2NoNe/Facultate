@@ -10,12 +10,8 @@ int prime(int n){
  		{
  			return 0;
  		}
- 		else
- 		{
- 			return 1;
- 		}
-
  	}
+ 	return 1;
 }
 
 int main(){
@@ -32,11 +28,11 @@ int main(){
 	for(i = 2; i <= n; i++)
 	{
 		F[i] = F[i-2] + F[i-1];
-		printf("F[%d]= %d\n", i, F[i]);
+		//printf("F[%d]= %d\n", i, F[i]);
 
  	}
 
- 	for(i=0; i<n ; i++){
+ 	for(i=3; i<n ; i++){
 
  		if( prime(F[i]) == 1)
 			printf("%d\n", F[i]);
