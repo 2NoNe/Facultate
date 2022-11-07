@@ -34,9 +34,9 @@ int main(){
 
 	}
 
-	for(i = 0; i < j; i++)
+/*	for(i = 0; i < j; i++)
 		printf("v[%d] =%2d ",i, v[i]);
-
+*/
 	printf("\n");
 
 	for(i =0; i < j; i++){

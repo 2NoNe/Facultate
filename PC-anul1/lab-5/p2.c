@@ -13,6 +13,9 @@ int cifra(int n, int c){
 			n = n/10;
 	}
 
+	if(n == 0)
+		printf("Nu\n");
+	
 	return 0;
 }
 
