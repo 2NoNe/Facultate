@@ -26,12 +26,12 @@ double taylor(double x, int n){
 	int i;
 	double t = 0;
 
-	for(i=1; i<=n; i++){
+	for(i=0; i<=n; i++){
 
 		t = t + (putere(x,i)/factorial(i));
 		//printf("%f\n", t);
 	}
-	t = t + 1;
+	//t = t + 1;
 	return t;
 }
 

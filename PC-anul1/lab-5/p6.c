@@ -71,8 +71,8 @@ int main(){
 				printf("%d %d\n", retine[j], retine[j+1]);
 
 			printf("%f\n", z[i]);
-			//return 0;
-			printf("\n");
+			return 0; //stergi linia pt ambele solutii
+			//printf("\n");
 		}
 	}
 
