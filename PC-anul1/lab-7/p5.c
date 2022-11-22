@@ -1,3 +1,25 @@
 #include <stdio.h>
 
-void panta(int x1, int y1, int x2, int y2, float *m, float *n)
+int *swap(int *pa,int *pb){
+
+	int aux;
+
+	aux = *pa;
+	*pa = *pb;
+	*pb = aux;
+	return pa;
+}
+
+int main(){
+
+	int a, b, p;
+
+	scanf("%d %d", &a, &b);
+
+	p=*swap(&a,&b);
+	printf("%d\n", p);
+
+	//printf("%d %d\n", a, b);
+
+	return 0;	
+}
