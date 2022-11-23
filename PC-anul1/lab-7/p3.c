@@ -4,24 +4,19 @@
 char *strdel (char *p, int n){
 
 	int i;
-	char c[100];
+	char c[50] = {};
 
-	strcpy(c, p + n);
+	strcpy(p+n, c);
 	
-	//printf("%s\n", c);
-
-	strcpy(p,c);
-
-	//printf("%s\n", p);
-
 	return p;
 }
 
 char *strins(char *p, char *s){
-
+	
 	strcat(s,p);
-
-	return s;
+	strcpy(p,s);
+	
+	return p;
 }
 
 char *inlocuire(char *prop,char *caut, char *inloc){
@@ -30,6 +25,40 @@ char *inlocuire(char *prop,char *caut, char *inloc){
 	for(i = 0; i < strlen(prop); i++){
 		
 	}
+ 
+  // 	char *p1, *p2, *p3;
+  // 	int i=0,j=0,flag=0;
+
+  // 	p1 = str;
+  // 	p2 = sub;
+
+  // 	for(i = 0; i<strlen(str); i++)
+  // 	{
+  //   	if(*p1 == *p2)
+  //    	 {
+  //         p3 = p1;
+  //         for(j = 0;j<strlen(sub);j++)
+  //         {
+  //           if(*p3 == *p2)
+  //           {
+  //             p3++;p2++;
+  //           } 
+  //           else
+  //             break;
+  //         }
+  //         p2 = sub;
+  //         if(j == strlen(sub))
+  //         {
+  //            flag = 1;
+  //           printf("\nSubstring found at index : %d\n",i);
+  //         }
+  //     }
+  //   p1++; 
+  // }
+  // if(flag==0)
+  // {
+  //      printf("Substring NOT found");
+  // }
 }
 
 int main(){
@@ -40,17 +69,13 @@ int main(){
 
 	//p = strdel(s);
 
-	fgets(s,50,stdin);
+	scanf("%[^\n]", s);
+	scanf(" %[^\n]", r);
+	scanf(" %[^\n]", z);
 	
-	fgets(r,50,stdin);
-	
-	fgets(z,50,stdin);
-
-	//s = strdel(s + 3, 7);
-	p = strdel(s + 2, 2);
-	c = strins(p,r);
-	//for(i=0 ; s[i] != '\0'; i++)
-	printf("%s\n", c);
+	// printf("%ld\n", strlen(r));
+	// printf("%s\n", s+4+strlen(r));
+	printf("%s\n", (char*)strdel(s+6,3));
 
 	return 0;
 
