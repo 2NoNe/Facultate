@@ -22,9 +22,9 @@ int main(){
 
 	scanf("%[^\n]", from);
 
-	next(from,word);
+	//next(from,word);
 
-	printf("%s\n", word);
+	printf("%s\n", next(from,word));
 
 	return 0;
 }

@@ -12,12 +12,12 @@ int *swap(int *pa,int *pb){
 
 int main(){
 
-	int a, b, p;
+	int a, b, *p;
 
 	scanf("%d %d", &a, &b);
 
-	p=*swap(&a,&b);
-	printf("%d\n", p);
+	p=swap(&a,&b);
+	printf("%d\n", *p);
 
 	//printf("%d %d\n", a, b);
 

@@ -6,7 +6,9 @@ char *strdel (char *p, int n){
 	int i;
 	char c[50] = {};
 
-	strcpy(p+n, c);
+	strcpy(c, p+n);
+
+	strcpy(p,c);
 	
 	return p;
 }
@@ -21,44 +23,53 @@ char *strins(char *p, char *s){
 
 char *inlocuire(char *prop,char *caut, char *inloc){
 
-	int i, j = 0;
-	for(i = 0; i < strlen(prop); i++){
-		
-	}
- 
-  // 	char *p1, *p2, *p3;
-  // 	int i=0,j=0,flag=0;
+	int i, j = 0, k;
+  	char *p1, *p2, *p3, aux[50]={};
 
-  // 	p1 = str;
-  // 	p2 = sub;
+  	p1 = prop;
+  	p2 = caut;
 
-  // 	for(i = 0; i<strlen(str); i++)
-  // 	{
-  //   	if(*p1 == *p2)
-  //    	 {
-  //         p3 = p1;
-  //         for(j = 0;j<strlen(sub);j++)
-  //         {
-  //           if(*p3 == *p2)
-  //           {
-  //             p3++;p2++;
-  //           } 
-  //           else
-  //             break;
-  //         }
-  //         p2 = sub;
-  //         if(j == strlen(sub))
-  //         {
-  //            flag = 1;
-  //           printf("\nSubstring found at index : %d\n",i);
-  //         }
-  //     }
-  //   p1++; 
-  // }
-  // if(flag==0)
-  // {
-  //      printf("Substring NOT found");
-  // }
+  	for(i = 0; i<strlen(prop); i++)
+  	{
+    	if(*p1 == *p2)
+     	{
+        	p3 = p1;
+          	for(j = 0;j<strlen(caut);j++)
+          	{
+            	if(*p3 == *p2)
+            	{
+              		p3++;
+              		p2++;
+            	} 
+            	else
+              		break;
+          	}
+
+        	p2 = caut;
+        	if(j == strlen(caut))
+          	{
+          		printf("gasit %d\n", i);
+          		// if(i == 0){
+          		// 	strdel(prop,strlen(caut));
+          		// 	strins(prop,inloc);
+          		// 	printf("%s\n", prop);
+          		// 	i+=2;
+          		// }
+          		// else{
+          		// 	for(k=0; k<i; k++){
+          		// 		aux[k] = prop[k];
+          		// 	}
+         			// //printf("aux:%s\n", aux);
+         			// //strdel(prop+i,strlen(caut));
+          		// 	//printf("%s\n", prop);
+          		// 	//strins(prop,inloc);
+          		// 	//strins(prop, aux);
+          		// }
+          	}
+      	}
+    	p1++; 
+  	}
+  	return prop;
 }
 
 int main(){
@@ -74,8 +85,9 @@ int main(){
 	scanf(" %[^\n]", z);
 	
 	// printf("%ld\n", strlen(r));
-	// printf("%s\n", s+4+strlen(r));
-	printf("%s\n", (char*)strdel(s+6,3));
+	inlocuire(s,r,z);
+	//printf("%s\n", s);
+	//printf("%s\n", (char*)strdel(s,strlen(r)));
 
 	return 0;
 
